@@ -33,10 +33,11 @@ function generateResume() {
     // Generate resume content
     var resumeContent = "\n        <h3>Personal Details</h3>\n        <p><strong>Name:</strong> ".concat(resumeData.name, "</p>\n        <p><strong>Email:</strong> ").concat(resumeData.email, "</p>\n        <p><strong>Contact:</strong> ").concat(resumeData.contact, "</p>\n        <p><strong>Address:</strong> ").concat(resumeData.address, "</p>\n        \n        <h3>Skills</h3>\n        <p>").concat(resumeData.skills, "</p>\n\n        <h3>Education</h3>\n        <p><strong>Degree:</strong> ").concat(resumeData.degree, "</p>\n        <p><strong>Institute:</strong> ").concat(resumeData.place, "</p>\n        <p><strong>Year:</strong> ").concat(resumeData.year, "</p>\n        <p><strong>Grade:</strong> ").concat(resumeData.grading, "</p>\n\n        <h3>Experience</h3>\n        <p>").concat(resumeData.experience, "</p>\n    ");
     // Display the generated resume
-    var resumeDiv = document.getElementById('resume');
-    var resumeContentDiv = document.getElementById('resumeContent');
-    resumeContentDiv.innerHTML = resumeContent;
+    var resumeDiv = document.getElementById('generatebutton');
+    // var resumeContentDiv = document.getElementById('resumeContent');
+    // resumeContentDiv.innerHTML = resumeContent;
     resumeDiv.style.display = 'block';
 }
 // Add an event listener to the button to trigger the resume generation
 document.getElementById('generateResume').addEventListener('click', generateResume);
+generatePDF(resumeData);

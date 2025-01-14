@@ -68,7 +68,7 @@ function generateResume() {
     `;
 
     // Display the generated resume
-    const resumeDiv = document.getElementById('resume')!;
+    const resumeDiv = document.getElementById('generatebutton')!;
     const resumeContentDiv = document.getElementById('resumeContent')!;
     resumeContentDiv.innerHTML = resumeContent;
     resumeDiv.style.display = 'block';
